@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Bootstrap 4 CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Bootstrap 4 JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Jquery -->
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+    <!-- 字型 jf-openhuninn-1.1 -->
+    <link rel="stylesheet" href="/stylesheets/font/jf-openhuninn-1.1.ttf">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/MelaStyle.css">
+    <link rel="stylesheet" href="/stylesheets/cartListBox.css">
+    <!-- JS -->
+    <script src="/javascripts/all.js"></script>
+    <title>Mela</title>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <!-- 導覽列 -->
+    <%- include('./share/navigation',{result}) -%>
+
+    <!-- 購物進度條 -->
+    <div class="warp">
+        <div class="container-fluid">
+            <div class=""></div>
+            <ul class="row mt-5">
+                <li class="col-2"></li>
+                <li class="col-2 text-center"><span class=" step p-2 stepActive"> Step 1</span></li>
+                <li class="col-2 text-center"><span class=" step p-2"> Step 2</span></li>
+                <li class="col-2 text-center"><span class=" step p-2"> Step 3</span></li>
+                <li class="col-2 text-center"><span class=" step p-2"> Step 4</span></li>
+            </ul>
+            <ul class="row  align-items-center mb-5 mt-4">
+                <li class="col-2  align-items-left"></li>
+                <li class=" col-2 stepInfo text-center">確認活動資訊</li>
+                <li class=" col-2 stepInfo text-center">填寫付款資料</li>
+                <li class=" col-2 stepInfo text-center">活動訂單明細</li>
+                <li class=" col-2 stepInfo text-center">完成訂購</li>
+            </ul>
+            <!-- 購物車 -->
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8 shoppingCart">
+                    <div class="row shoppingCart_title align-bottom">
+                        <div class="align-bottom">
+                            <h3 class="p-3 pay-info">確認訂購資訊</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="row cartRow">
+                        <div class="row com_cartItem">
+                            <div class="col-6"><img src="/images/event03.jpg" alt=""></div>
+
+                            <div class="com_info col-6">
+                                <h5 class="com">活動名稱：</h5>
+                                <span class="com com_title">傳說中的女神-洛神</span>
+                                <br>
+                                <h5 class="com"> 地 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 點：</h5>
+                                <span class="com_site">台中后里</span>
+                                <br>
+                                <h5 class="com"> 活動日期：</h5>
+                                <h5 class="com com_date">109/08/30</h5>
+                                <br>
+                                <h5 class="com"> 報名人數：</h5>
+                                <input class="com_amount" style="width: 60px; height: 30px;" type="number"></input>
+                                <br>
+                                <button class="add_cart" data-price="800">OK</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row cartExplain">
+                        <div class="col-3 "> </div>
+                        <div class="col-6"></div>
+                        <div class="col-3 text-right price">
+                            <h5>總共 ：<span id="com_total"> 0</span>元 </h5>
+                        </div>
+
+                    </div>
+                    <!-- 下一步按鈕 -->
+                    <div class="row mt-5 nextBTN">
+                        <div class="col-3">
+                            <a href="/melaPlace">
+                                <button class="btnStep btnUp  noneActive" style="width: 100%;">活動頁面</button>
+                            </a>
+                        </div>
+                        <div class="col-6"></div>
+                        <div class="col-3">
+                            <a href="/comp/melaPlacePayment">
+                                <button class="btnStep btnNext" style="width: 100%;">下一步</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- 頁尾 -->
+        <div class="footer">
+            <%- include('./share/footer') -%>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    $('.add_cart').click(function () {
+        // alert('ok');
+        var compaign = $(this).closest('.com_info');
+        var newCompaign = {
+            comName: compaign.find('.com_title').text(),
+            comPrice: compaign.find('.add_cart').data('price'),
+            comAmount: compaign.find('.com_amount').val(),
+            comSite: compaign.find('.com_site').text(),
+            comDate: compaign.find('.com_date').text(),
+        }
+        var comTotal = newCompaign.comPrice * newCompaign.comAmount;
+        newCompaign["comTotal"] = comTotal;
+        localStorage.setItem('comCart', JSON.stringify(newCompaign));
+        console.log(newCompaign);
+
+        var comCart = JSON.parse(localStorage.getItem("comCart"));
+
+        // 總金額
+        showTotal();
+        function showTotal() {
+            document.getElementById("com_total").innerText = comTotal;
+        }
+    })
+
+
+</script>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Bootstrap 4 CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- Bootstrap 4 JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <!-- WOW.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <!-- Jquery -->
+  <script src="/javascripts/jquery-3.5.1.min.js"></script>
+  <!-- JS -->
+  <script src="/javascripts/all.js"></script>
+  <!-- 字型 jf-openhuninn-1.1 -->
+  <link rel="stylesheet" href="/stylesheets/font/jf-openhuninn-1.1.ttf">
+    <!-- css引用MelaStyle.css -->
+    <link rel="stylesheet" href="/stylesheets/MelaStyle.css">
+    <link rel="stylesheet" href="/stylesheets/memberindexCH.css">
+    <title>會員中心 訂單查詢</title>
+</head>
+<body>
+    <!-- 導覽列 -->
+    <%- include('./share/navigation') -%>
+
+    <div class="wrap">
+        <div class="container">
+            <div class="controltable">
+                <img src="/images/member_icon.svg" width="100px">
+                <li>
+                    <h3>Hello! <%= user %></h3>
+                </li>
+                <li>
+                  
+                </li>
+                <a href="/users/memberLogout">
+                    <button class="btnMela">登出</button>
+                </a>
+            </div>
+            
+            <!-- 切換頁籤 -->
+            <div class="tablewrap">
+                <div class="tabletag">
+                    <div class="order"><a href="/users/memberOrder"><h6>訂單查詢</h6></a></div>
+                    <div class="event"><a href="/users/memberEvent"><h6>活動報名</h6></a></div>
+                    <div class="member"><a href="/users/memberEdit"><h6>會員資料</h6></a></div>
+                    <div class="password"><a href="/users/memberPass"><h6>修改密碼</h6></a></div>
+                </div>
+            <!-- 訂單查詢表格 -->
+                <div class="tableinfoorder">
+                    <div class="tableinfotag">
+                        <h4>訂單查詢</h4>
+                    </div>
+                    <table class="table  table-hover">
+                        <thead>
+                          <tr>
+                            <th>訂單編號</th>
+                            <th>訂購日期</th>
+                            <th>付款方式</th>
+                            <th>訂購方案</th>
+                            <th>訂購金額</th>
+                            <th>訂單進度</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <% for(let i = 0; i < memberOrderData.length; i++ ) { %>
+                          <tr>
+                            <td><%= memberOrderData[i].poID %></td>
+                            <td><%= memberOrderData[i].poDate %></td>
+                            <td><%= memberOrderData[i].poPayMethod %></td>
+                            <td><%= memberOrderData[i].pID %></td>
+                            <td><%= memberOrderData[i].poPrice %></td>
+                            <td><%= memberOrderData[i].poDeliver %></td>
+                          </tr>
+                          <% } %>                          
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 頁尾 -->
+    <div class="footer wow fadeInUp">
+        <div class="footerimg">
+            <img src="/images/footerbackground.png">
+            <div class="footerlink">
+                <a href=""><h5>購物說明</h5></a>
+                <a href=""><h5>|  網站使用條款</h5></a> 
+                <a href=""><h5>|  隱私權政策</h5></a>
+                <a href=""><h5>|  聯絡我們</h5></a>
+            </div>
+            <h4>© 2020 Mela 蔬果箱訂閱｜每月小農蔬果新鮮配送到府</h4>
+        </div>
+    </div>
+    <script>
+        // 點order頁籤
+        $(".order").css("background-color","#8FC31F");
+        $(".order a").css("color","white");
+        var date = document.getElementById("Date")
+        var Str=date.getFullYear();
+        cosole.log("OK");
+        console.log(Str);
+        console.log(date);
+
+        
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/* font: inherit; */
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 以上CSS RESET */
+
+/* header */
+.logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 0 0 30px 0;
+    z-index: 10;
+}
+/* header圖片 */
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+/* 捲動後header設定 */
+.white{
+    transition: background 1s;
+    background: white;
+    height: 100px;
+}
+
+.nav-item{
+    margin-top: 20px;
+    margin-right: 50px;
+}
+/* 捲動回上層herder設定 */
+.navset{
+    height: 100px;
+    z-index: 99;
+    transition: background 1s;
+}
+/* 三選項設定 */
+.nav-menu{
+    font-size: 18px;
+    font-family: 'jf-openhuninn-1.1';
+    color: #8FC31F;
+    text-align: center;
+    position: relative;
+}
+/* 三選項hover設定 */
+.nav-menu:hover{
+    background: white;
+    color: #8FC31F;
+    border-radius: 50px
+}
+/* 三選項小球偽元素 */
+.nav-menu::before{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #8FC31F;
+    content: "";
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.18, 0.65, 0.08, 1.01);
+}
+/* 三選項小球偽元素hover */
+.nav-menu:hover::before{
+    top: -20%;
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.18, 0.65, 0.08, 1.01);
+}
+
+p{
+    color: #8FC31F;
+    font-family: 'jf-openhuninn-1.1';
+}
+
+.warp{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 200px;
+}
+
+.shoppingCart{
+        width: 100%;
+        height: 100%;
+        border: gray solid 1px;
+        border-radius: 0.5rem;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+}
+
+.shoppingCart_title{
+    border-bottom:  gray solid 1px;
+    height: 50px;
+}
+
+.cartItem{
+    height: 80%;
+    border: gray solid 1px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+.cartItem h4{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.cartItem img{
+    width: 100%;
+}
+
+.btnAdd{
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    width: 50px;
+    height: 40px;
+    font-size: 28px;
+    color: white;
+    background-color:#8FC31F;
+    margin: 2px 4px;
+    transition-duration: 0.5s;
+}
+
+.btnAdd:hover{
+    background-color:white;
+    color:#8FC31F ;
+    border: 1px solid #8FC31F;
+}
+
+.cartItem_Number{
+    width: 8rem;
+    display: inline-block;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 28px;
+}
+
+.btnStep{
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color:#8FC31F;
+    transition-duration: 0.5s;
+}
+
+.btnAdd:hover{
+    background-color:white;
+    color:#8FC31F ;
+    border: 1px solid #8FC31F;
+}
+
+.btnUp{
+    float: left;
+}
+
+.btnNext{
+    float: right;
+}
+
+.step{
+    border:#9e9e9e solid 1px ;
+    width: 100px;
+    border-radius: 0.5rem;
+    color: #707070;
+}
+
+.stepInfo {
+    color: #707070;
+}
+
+.noneActive{
+    background-color:#e0e0e0;
+    color: gray;
+}
+
+.btnStep:hover{
+    background-color:white;
+    color:#8FC31F ;
+    border: 1px solid #8FC31F;
+}
+
+.stepActive{
+    background-color:#cfcfcf;
+}
+
+.payMethod_Input{
+    width: 100%;
+    margin: auto;
+    height: 40px;
+}
+
+.payMethod_title{
+    font-size: 20px;
+    color:#707070 ;
+    display: inline;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.cartExplain{
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-top:  gray solid 1px;
+    color:#707070 ;
+}
+
+.nextBTN{
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.price{
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+/* 活動結帳頁 */
+.com_cartItem{
+    border:gray solid 1px ;
+    border-radius: 0.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    margin-bottom:2rem ;
+    padding: 20px;
+}
+.com_cartItem img{
+ width: 20rem;
+}
+
+.com_span{
+    width:20rem;
+}
+
+.com_info{
+    color:#707070 ;
+    padding-top: 1rem;
+    font-size: 20px;
+}
+
+.com_info h5{
+    margin-bottom: 15px;
+}
+
+.pay-info{
+    display: inline-block;
+    font-size: 24px;
+}
+
+.choosePay{
+    font-size: 22px;
+    width: 100%;
+}
+
+.paybox{
+    margin-top: 20px;
+    width: 100%;
+    color: #707070;
+}
+
+input{
+    margin-right: 10px;
+}
+
+.radio-label {
+    font-size: 1.6rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.radio-input {
+    visibility: hidden;
+}
+
+.buttonStyle{
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 5px solid #8FC31F;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.radio-label p{
+    font-size: 12px;
+    color: #b4b3b3;
+    margin-top: 5px;
+}
+
+.buttonStyle::after { /* 中間點點 */
+    content: "";
+    display: block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #8FC31F;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.radio-input:checked ~ .radio-label .buttonStyle::after {
+    /* 選中radio時 才顯示中間點點 */
+    opacity: 1;
+}
+
+.invoicebox{
+    margin-top: 20px;
+    width: 100%;
+    color: #707070;
+}
+
+.footer{
+    text-align: center;
+    width: 100%;
+}
+.footerimg{
+    position: relative;
+}
+.footer h4{
+    position: absolute;
+    top: 250px;
+    left: 35%;
+}
+.footerlink{
+    display: flex;
+    position: absolute;
+    top: 200px;
+    left: 35%;
+}
+.footerlink a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+.footerlink a:hover{
+    color: #58751A;
+}
+
+.footerimg img{
+    width: 100%
+}
+
+.qty {
+    width: 50%;
+    height: auto;
+    text-align: center;
+    border: 0;
+  }
+  /* input.qtyplus {
+    width: 25px;
+    height: 34px;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+  } */
+  
+  input.qtyminus {
+    width: 25px;
+    height: 34px;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+  }
+
+  .imgbox {
+      width: 100%;
+      text-align: center;
+  }

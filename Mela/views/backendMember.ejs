@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap4.5.2 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- modal -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- modal -->
+
+    <!-- JQ 3.5.1 CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 引用文字檔 -->
+    <link rel="stylesheet" href="/stylesheets/font/jf-openhuninn-1.1.ttf">
+    <!-- 引用CSS -->
+    <link rel="stylesheet" href="/stylesheets/MelaStyle.css">
+    <link rel="stylesheet" href="/stylesheets/backend.css">
+
+
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-2">
+                <h1>Mela</h1>
+            </div>
+            <div class="col-5   ">
+                <h1>後台管理系統</h1>
+            </div>
+            <div class="col-3 d-flex flex-row-reverse"><img style="width: 50px; height: 50px;"
+                    src="/images/settings.png" alt="" "></div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <!-- body主架構 -->
+    <div class=" row">
+                <div class="col-1"></div>
+                <!-- slider start -->
+                <div class="col-2 ">
+                    <div class="slider">
+                        <div class="sliderStyle">
+                            <h5 class="">Hello!陳先生</h5>
+                            <h5 class="">blackss</h5>
+                            <hr>
+                            <div class="memberSlider">
+                                <a href="./member_myedit.html javascript:; ">
+                                    <h5>會員資料
+                                    </h5>
+                                </a>
+                            </div>
+                            <div class="eventSlider">
+                                <a href="./member_activity.html javascript:; ">
+                                    <h5>活動資訊</h5>
+                                </a>
+                            </div>
+                            <div class="orderSlider">
+                                <a href="./member_myorder.html javascript:; ">
+                                    <h5>方案資訊</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- main contentstart -->
+                <div class="col-8">
+                    <div class="mainTop">
+                        <div><button class="neMela" data-toggle="modal" data-target="#AddModal">新增</button></div>
+                        <div><button class="deMela">刪除</button></div>
+                        <div></div>
+                    </div>
+                    <br>
+                    <div class="row">
+
+                        <table class="melaTable table col-12 table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th>
+                                        <h5>會員ID</h5>
+                                    </th>
+                                    <th>
+                                        <h5>姓名</h5>
+                                    </th>
+                                    <th>
+                                        <h5>聯絡方式</h5>
+                                    </th>
+                                    <th>
+                                        <h5>帳號</h5>
+                                    </th>
+                                    <th>
+                                        <h5>密碼</h5>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(let i = 0; i < backendMembersql.length; i++ ) { %>
+                                <tr>
+                                    <td></td>
+                                    <td class="combox">
+                                        <div class="melaNicky">
+                                            <button class="neMela upDate" onclick="up(1);" data-toggle="modal" data-target="#updateModal"
+                                                id="btn">更改
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td><%= backendMembersql[i].mID %></td>
+                                    <td><%= backendMembersql[i].mName %></td>
+                                    <td><%= backendMembersql[i].mPhone %></td>
+                                    <td><%= backendMembersql[i].mAccount %></td>
+                                    <td><%= backendMembersql[i].mPass %></td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- main content -->
+            </div>
+            <!-- slider end -->
+
+            <!-- modal start -->
+            <!-- Button trigger modal -->
+
+            <!-- Modal 1 add -->
+            <div class="modal fade" id="AddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="">新增</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body row">
+                            <div class="col-12">
+                                <h5>姓名</h5>
+                                <input type="text" id="memberName">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary" id="okButton">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal End -->
+
+
+            <!-- modal2 update -->
+            <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="">修改</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body row">
+                            <div class="col-12">
+                                <h5>姓名</h5>
+                                <input type="text" id="updateInput" placeholder="">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary" id="okButton">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal2 End -->
+
+
+            <script>
+                // 點圖片出現modal
+
+                $("#myImg").click(function () {
+                    $('#updateModal').modal('show');
+                });
+
+
+                
+
+                $(".upDate").on("click", function up () {
+                    getElementbyID('updateInput').val() =  getElementbyID('btn').val();
+                });
+
+                //slider 目前位置樣式
+                console.log('ok2');
+                // ajax丟資料
+                $("#okButton").click(function () {
+                    var dataToSever = {
+                        memberName: $('#memberName').val(),
+                    };
+                    $.ajax({
+                        type: "post",
+                        url: "/backend/backendMember",
+                        dataType: "json",
+                        data: dataToSever
+                    })
+                    console.log('ok3');
+                });
+
+            </script>
+</body>
+
+</html>

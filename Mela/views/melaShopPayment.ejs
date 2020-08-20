@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Bootstrap 4 CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Bootstrap 4 JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Jquery -->
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+    <!-- 字型 jf-openhuninn-1.1 -->
+    <link rel="stylesheet" href="/stylesheets/font/jf-openhuninn-1.1.ttf">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/MelaStyle.css">
+    <link rel="stylesheet" href="/stylesheets/cartListBox.css">
+    <!-- JS -->
+    <script src="/javascripts/all.js"></script>
+    <title>Mela</title>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <!-- 導覽列 -->
+    <%- include('./share/navigation',{result}) -%>
+
+    <!-- 購物進度條 -->
+    <div class="warp">
+        <div class="container-fluid">
+            <div class=""></div>
+            <ul class="row mt-5">
+                <li class="col-2"></li>
+                <li class="col-2 text-center"><span class=" step p-2 stepActive"> Step 1</span></li>
+                <li class="col-2 text-center"><span class=" step p-2 stepActive"> Step 2</span></li>
+                <li class="col-2 text-center"><span class=" step p-2"> Step 3</span></li>
+                <li class="col-2 text-center"><span class=" step p-2"> Step 4</span></li>
+            </ul>
+            <ul class="row  align-items-center mt-4 mb-5">
+                <li class="col-2  align-items-left"></li>
+                <li class=" col-2 stepInfo text-center">確認訂購資訊</li>
+                <li class=" col-2 stepInfo text-center">填寫付款資料</li>
+                <li class=" col-2 stepInfo text-center">訂單明細</li>
+                <li class=" col-2 stepInfo text-center">完成訂購</li>
+            </ul>
+            <!-- 填寫付款資料 -->
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8 shoppingCart">
+                    <div class="row shoppingCart_title align-bottom">
+                        <div class="align-bottom">
+                            <h3 class="p-3 pay-info">收件人資訊</h3>
+                            <!-- <input type="checkbox" id="check"><label for="check"></label> 同會員資料</h6> -->
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-9 mt-3 d-flex justify-content-center">
+                            <label for="deliverName" class="col-3  payMethod_title mr-2">姓名</label>
+                            <input type="text" class="payMethod_Input col-8" id="deliverName"
+                                value=" <%=result[0].mName%>">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9 mt-3 d-flex justify-content-center">
+                            <label for="deliverName" class="col-3 payMethod_title" style="width: 100px;">Email</label>
+                            <input type="text" class="payMethod_Input col-8" id="deliverEmail"
+                                value="<%=result[0].mAccount%>" placeholder="交易通知將會發送到此Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9 mt-3 d-flex justify-content-center">
+                            <label for="deliverName" class="col-3  payMethod_title">手機</label>
+                            <input type="text" class="payMethod_Input col-8" id="deliverPhone"
+                                value="<%=result[0].mPhone%>" placeholder="EX:09XXXXXXXX">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9 mt-3 d-flex justify-content-center">
+                            <label for="deliverName" class="col-3  payMethod_title">收件地址</label>
+                            <input type="text" class="payMethod_Input col-8" id="deliverAdr" value=""
+                                placeholder="台中市公益路二段51號">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9 mt-3 d-flex justify-content-center">
+                            <label for="deliverName" class="col-3  payMethod_title">備註</label>
+                            <input type="text" class="payMethod_Input col-8" id="memo" value="" placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 付款方式 -->
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8 shoppingCart">
+                    <div class="row shoppingCart_title align-bottom">
+                        <div class="align-bottom">
+                            <h3 class="p-3 pay-info">付款方式</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <ul class="choosePay">
+                            <li>
+                                <div class="paybox">
+                                    <input type="radio" class="radio-input" id="CreditCard" name="payMethod"
+                                        value="信用卡付款">
+                                    <label for="CreditCard" class="radio-label" id="credit">
+                                        <span class="buttonStyle"></span>
+                                        信用卡付款
+                                    </label>
+                                </div>
+                            </li>
+                            <hr>
+                            <li>
+                                <div class="paybox">
+                                    <input type="radio" class="radio-input" id="onPlace" name="payMethod"
+                                        value="ATM轉帳">
+                                    <label for="onPlace" class="radio-label">
+                                        <span class="buttonStyle"></span>
+                                    ATM轉帳</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 發票方式 -->
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8 shoppingCart">
+                    <div class="row shoppingCart_title align-bottom">
+                        <div class="align-bottom">
+                            <h3 class="p-3 pay-info">發票方式</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <ul class="pay-info">
+                            <li>
+                                <div class="invoicebox">
+                                    <input type="radio" class="radio-input" id="invoice1" name="pay" value=" 二聯電子發票">
+                                    <label for="invoice1" class="radio-label">
+                                        <span class="buttonStyle"></span>
+                                        二聯電子發票<p>配合國稅局勸止二聯換開三聯之政策，本公司保留換開發票之權利</p>
+                                    </label>
+                                </div>
+                            </li>
+                            <hr>
+                            <li>
+                                <div class="invoicebox">
+                                    <input type="radio" class="radio-input" id="invoice2" name="pay" value="傳統發票">
+                                    <label for="invoice2" class="radio-label">
+                                        <span class="buttonStyle"></span>
+                                        傳統紙本發票
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- 下一步按鈕 -->
+            <div class="row mt-5 ">
+                <div class="col-2"></div>
+                <div class="col-2" style="padding: 0px;">
+                    <a href="/melaShopBox">
+                        <button class="btnStep btnUp noneActive" style="width: 100%;">上一步</button>
+                    </a>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-2" style="padding: 0px;">
+                    <a href="/shop/melaShopOrder">
+                        <button class="btnStep btnNext" style="width: 100%;" id="payNext">下一步</button>
+                    </a>
+                </div>
+            </div>
+            <!-- 頁尾 -->
+            <div class="footer">
+                <%- include('./share/footer') -%>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $('#payNext').click(function () {
+
+            let payMent = {
+                name: $("#deliverName").val(),
+                email: $("#deliverEmail").val(),
+                phone: $("#deliverPhone").val(),
+                adr: $("#deliverAdr").val(),
+                memo: $("#memo").val(),
+                payMethod: $("input[name='payMethod']:checked").val(),
+                recieptMethod: $("input[name='pay']:checked").val()
+                // document.getElementsByName("payMethod").val()
+                // payMethod: $('input:checkbox:checked[name=" payMethod"]').map(function () { return $(this).id(); }),
+                // recieptMethod: $("#").val()
+            }
+            localStorage.setItem("person", JSON.stringify(payMent));
+            var x = localStorage["person"];
+            console.log(x);
+            // document.getElementById("demo").innerHTML = x; localStorage.getItem("")
+        })
+
+    </script>
+</body>
+
+</html>

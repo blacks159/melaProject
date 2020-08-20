@@ -1,0 +1,93 @@
+*{
+    font-family: 'jf-openhuninn-1.1'
+}
+
+/* navbar 置中 */
+nav {
+    text-align: center;
+}
+
+
+/* 側攔 */
+.slider {
+    text-align: center;;
+}
+
+/* 新增按鈕 */
+.neMela{
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    width: 100px;
+    height: 45px;
+    font-size: 16px;
+    color: white;
+    background-color:#8FC31F;
+    margin: 2px 4px;
+    transition-duration: 0.5s;
+    /* background: url("img/member_icon.svg") no-repeat left center; */
+}
+.neMela:hover{
+    background-color:white;
+    color:#8FC31F;
+    border: 1px solid #8FC31F;
+}
+
+/* 刪除按鈕 */
+.deMela{
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    width: 100px;
+    height: 45px;
+    font-size: 16px;
+    color: white;
+    background-color:rgb(255, 64, 64);
+    margin: 2px 4px;
+    transition-duration: 0.5s;
+    /* background: url("img/member_icon.svg") no-repeat left center; */
+}
+
+.deMela:hover{
+    background-color:white;
+    color:rgb(255, 64, 64);
+    border: 1px solid rgb(255, 64, 64);
+}
+
+/* 按鈕:選取全部 */
+.checkMela{
+    cursor: pointer;
+    /* background-color: pink; */
+    width: 100px;
+    height: 45px;
+    padding-top: 10px;
+    margin: 2px 4px;
+    border-radius: 30px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+
+.mainTop{
+    display: flex;
+}
+
+.melaTable {
+    width: 100%;
+    text-align: center;
+}
+
+.melaNicky {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.mela {
+
+}
+.combox{
+    padding: 10px 0px 0px 0px;
+}
+

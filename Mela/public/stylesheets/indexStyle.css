@@ -1,0 +1,520 @@
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/* font: inherit; */
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 以上CSS RESET */
+/* 全域設定 */
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-family: 'jf-openhuninn-1.1';
+}
+/* body{
+    overflow-x: hidden;
+} */
+
+/* header */
+.logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 0 0 30px 0;
+    z-index: 10;
+}
+/* header圖片 */
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+/* 捲動後header設定 */
+.white{
+    transition: background 1s;
+    background: white;
+    height: 100px;
+}
+
+.nav-item{
+    margin-top: 20px;
+    margin-right: 50px;
+}
+/* 捲動回上層herder設定 */
+.navset{
+    height: 100px;
+    z-index: 99;
+    transition: background 1s;
+}
+/* 三選項設定 */
+.nav-menu{
+    font-size: 18px;
+    font-family: 'jf-openhuninn-1.1';
+    color: #8FC31F;
+    text-align: center;
+    position: relative;
+}
+/* 三選項hover設定 */
+.nav-menu:hover{
+    /* background: white; */
+    color: #8FC31F;
+    border-radius: 50px
+}
+/* 三選項小球偽元素 */
+.nav-menu::before{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #8FC31F;
+    content: "";
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.18, 0.65, 0.08, 1.01);
+}
+/* 三選項小球偽元素hover */
+.nav-menu:hover::before{
+    top: -20%;
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.18, 0.65, 0.08, 1.01);
+}
+
+p{
+    color: #8FC31F;
+    font-family: 'jf-openhuninn-1.1';
+}
+/* RWD設定 */
+.showmenu{
+    display: none;
+}
+
+/* 主體 */
+.warp{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+/* 第一區塊 */
+.shop{
+    background-image: url(/images/index_head.jpg);
+    background-repeat:no-repeat;
+    width: 95%;
+    height: 1000px;
+    background-size: cover;
+    position: relative;
+}
+/* 第一區塊左邊空白區塊 */
+.shopLeft{
+    height: 100%;
+    width: 50%;
+}
+/* 右邊區塊 */
+.shopRight{
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+/* 右邊區塊文字內容 */
+.shopRight-word{
+    position: absolute;
+    top: 40%;
+    right: 25%;
+    color: #8FC31F;
+    font-family: 'jf-openhuninn-1.1';
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+
+.shopRight-word div{
+    margin-bottom: 10px;
+}
+/* 訂閱方案按鈕 */
+.wordBTNbox{
+    text-align: left;
+}
+
+.wordBTN{
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    width: 100px;
+    height: 45px;
+    font-size: 16px;
+    color: white;
+    background-color:#8FC31F;
+    margin: 2px 4px;
+    transition-duration: 0.5s;
+    /* background: url("img/member_icon.svg") no-repeat left center; */
+}
+/* 三個按鈕選項hover */
+.wordBTN:hover, .basketBTN:hover, .aboutBTN:hover{
+    background-color:white;
+    color:#8FC31F ;
+    border: 1px solid #8FC31F;
+}
+/* 什麼是蔬果香訂閱  重疊 */
+.subscription{
+    width: 35%;
+    position: absolute;
+    /* color: #8FC31F; */
+    font-family: 'jf-openhuninn-1.1';
+    /* font-size: 30px; */
+    left: 23%;
+    top: 88%;
+    /* background-color: white; */
+    /* border-radius: 30px; */
+    /* text-align: center; */
+    /* padding: 10px; */
+    /* border: #8FC31F 2px solid; */
+}
+/* 第二區塊C */
+.about{
+    margin-top: 80px;
+    position: relative;
+}
+/* 第二區塊上方文字內容 */
+.aboutWord{
+    text-align: center;
+    color: #58751A;
+    font-family: 'jf-openhuninn-1.1';
+    font-size: 16px;
+    letter-spacing: 3px;
+    /* line-height: 45px; */
+    padding-left: 60px;
+}
+.aboutWord p {
+    line-height:30px;
+}
+/* 第二區塊主內容 */
+/* .aboutMela{
+    margin-top: 100px;
+    text-align: center;
+    position: relative;
+} */
+.aboutinfo{
+    display: flex;
+    padding: 5% 16%;
+    position: relative;
+}
+.aboutinfotext{
+    margin: 30px 30px;
+}
+.aboutinfo h2{
+    color: #D9DECD;
+    font-family: 'jf-openhuninn-1.1';
+    font-size: 100px;
+    position: absolute;
+    top: -3%;
+    left: 35%;
+    z-index: 10;
+}
+/* 左漂浮橫槓 */
+/* .aboutbox1{
+    position: absolute;
+    top: 20%;
+    width: 200px;
+    height: 30px;
+    left: 12%;
+    background-color: #8FC31F;
+    z-index: 10;
+} */
+/* 右漂浮橫槓 */
+.aboutbox2{
+    position: absolute;
+    top: 70%;
+    width: 200px;
+    height: 30px;
+    left: 78%;
+    background-color: #8FC31F;
+    z-index: 10;
+}
+/* 圖片主內容 */
+.aboutMelaImg{
+    display: flex;
+    /* text-align: center; */
+    position: relative;
+}
+/* 圖片設定 */
+.aboutMelaImg img{ 
+    /* border-radius: 50px; */
+    width: 500px;
+    padding: 0px 230px;
+}
+/* 了解更多按鈕 */
+.aboutBTN{
+    background-color: #8FC31F;
+    left: 45%;
+    top: 75%;
+    /* position: absolute; */
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    width: 100px;
+    height: 45px;
+    font-size: 16px;
+    color: white;
+    background-color:#8FC31F;
+    margin: 2px 4px;
+    transition-duration: 0.5s;
+    font-family: 'jf-openhuninn-1.1';
+}
+
+.aboutBTN p{
+    color: white;
+}
+/* 蔬果箱有什麼 重疊 */
+.have{
+    width: 35%;
+    position: absolute;
+    color: #8FC31F;
+    font-family: 'jf-openhuninn-1.1';
+    font-size: 30px;
+    left: 23%;
+    top: 100%;
+    /* background-color: white; */
+    /* border-radius: 30px; */
+    /* text-align: center; */
+    /* padding: 10px; */
+    /* border: #3d442f 2px solid; */
+    z-index: 10;
+}
+/* 第三區塊 */
+.content{
+    text-align: center;
+    margin-top: 100px;
+    position: relative;
+    background-color: #D9DECD;
+    width: 100%;
+}
+/* 第三區塊上方文字內容 */
+.basketWord{
+    padding-top: 100px;
+}
+
+.basketWord h4{
+    color: #58751A;
+    /* font-size: 16px; */
+    /* letter-spacing: 3px; */
+    /* line-height: 45px; */
+    font-family: 'jf-openhuninn-1.1';
+}
+/* 第三區塊圖片主內容區塊 */
+.basketImg{
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+/* 第三區塊圖片 */
+.basketImg img{
+    border-radius: 50px;
+    width: 70%;
+}
+/* 左漂浮橫槓 */
+.basketbox1{
+    position: absolute;
+    top: 40%;
+    width: 200px;
+    height: 30px;
+    left: 12%;
+    background-color: #8FC31F;
+    z-index: 10;
+}
+/* 右漂浮橫槓 */
+.basketbox2{
+    position: absolute;
+    top: 80%;
+    width: 200px;
+    height: 30px;
+    left: 78%;
+    background-color: #8FC31F;
+    z-index: 10;
+}
+
+.basketImg h2{
+    position: absolute;
+    color:white;
+    font-family: 'jf-openhuninn-1.1';
+    font-size: 100px;
+    top: 27%;
+    left: 10%;
+}
+/* 第三區塊按鈕 */
+.basketBTN{
+    font-size: 25px;
+    left: 47%;
+    top: 75%;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    width: 100px;
+    height: 45px;
+    font-size: 16px;
+    color: white;
+    background-color:#8FC31F;
+    margin: 2px 4px;
+    transition-duration: 0.5s;
+    font-family: 'jf-openhuninn-1.1';
+}
+
+.basketBTN P{
+    color: white;
+}
+/* 訂購的好處 重疊 */
+.order{
+    width: 35%;
+    position: absolute;
+    color: #8FC31F;
+    font-family: 'jf-openhuninn-1.1';
+    font-size: 30px;
+    left: 23%;
+    top: 88%;
+    /* background-color: white;
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px;
+    border: #8FC31F 2px solid; */
+}
+/* 第四區塊 */
+.whyMela{ 
+    margin-top: 50px;
+    position: relative;
+}
+
+.why1{
+    width:350px;
+    overflow: hidden;
+    /* border-radius: 30px; */
+    /* border: solid 2px #8FC31F; */
+    height: 250px;
+    position: relative;
+    /* box-shadow: px 0 0 0 gray; */
+}
+
+.whybox{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.why1 img{
+    /* widows: 80%; */
+    width: 120%;
+}
+
+.whyPromo1, .whyPromo2, .whyPromo3{
+    background: #8FC31F;
+    font-size: 20px;
+    position: absolute;  
+    z-index: 10;
+    padding: 20px;
+    /* border-radius: 30px; */
+}
+.whyPromo1 p,.whyPromo2 p,.whyPromo3 p{
+    color: white;
+    font-family: 'jf-openhuninn-1.1';
+    font-size: 20px;
+}
+
+.whyPromo1{
+    top: 90%;
+    left:3%;
+}
+
+.whyPromo2{
+    top: 90%;
+    left: 38%;
+}
+
+.whyPromo3{
+    top: 90%;
+    left: 74%;
+}
+
+.whyh2{
+    color: #D9DECD;
+    font-family: 'jf-openhuninn-1.1';
+    font-size: 100px;
+}
+.memberinfo{
+    margin: 100px 230px;
+    line-height: 1.4rem;
+    text-align: center;
+    align-items: center;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+}
+.footerimg{
+    position: relative;
+}
+.footer h4{
+    position: absolute;
+    top: 250px;
+    left: 35%;
+}
+.footerlink{
+    display: flex;
+    position: absolute;
+    top: 200px;
+    left: 35%;
+}
+.footerlink a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+.footerlink a:hover{
+    color: #58751A;
+}
+
+.footerimg img{
+    width: 100%
+}
+

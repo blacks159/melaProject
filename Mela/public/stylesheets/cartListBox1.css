@@ -1,0 +1,163 @@
+.myNavbar{
+width: 100%;
+height: 100px;
+background-color: pink;
+}
+
+.shoppingCart{
+        width: 100%;
+        height: 100%;
+        border: gray solid 1px;
+        border-radius: 0.5rem;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+}
+
+.shoppingCart_title{
+    border-bottom:  gray solid 1px;
+    height: 50px;
+}
+
+.cartItem{
+    height: 80%;
+    border: gray solid 1px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+.cartItem img{
+    width: 100%;
+}
+
+.btnAdd{
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    width: 50px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color:#8FC31F;
+    margin: 2px 4px;
+    transition-duration: 0.5s;
+}
+
+.btnAdd:hover{
+    background-color:white;
+    color:#8FC31F ;
+    border: 1px solid #8FC31F;
+}
+
+.cartItem_Number{
+    width: 8rem;
+    display: inline-block;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.btnStep{
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color:#8FC31F;
+   
+    transition-duration: 0.5s;
+}
+
+.btnAdd:hover{
+    background-color:white;
+    color:#8FC31F ;
+    border: 1px solid #8FC31F;
+}
+
+.btnUp{
+    float: left;
+}
+
+.btnNext{
+    float: right;
+}
+
+.step{
+    border:#9e9e9e solid 1px ;
+    width: 100px;
+    border-radius: 0.5rem;
+    color: #707070;
+}
+
+.stepInfo {
+    color: #707070;
+}
+
+.noneActive{
+    background-color:#e0e0e0;
+    color: gray;
+}
+
+.btnStep:hover{
+    background-color:white;
+    color:#8FC31F ;
+    border: 1px solid #8FC31F;
+}
+
+.stepActive{
+    background-color:#cfcfcf;
+}
+
+.payMethod_Input{
+    width: 100%;
+    margin: auto;
+}
+
+.payMethod_title{
+    font-size: 20px;
+    color:#707070 ;
+    display: inline;
+    margin: auto;
+}
+
+.cartExplain{
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-top:  gray solid 1px;
+    color:#707070 ;
+}
+
+.nextBTN{
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+/* 活動結帳頁 */
+.com_cartItem{
+    border:gray solid 1px ;
+    border-radius: 0.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    margin-bottom:2rem ;
+    padding: 20px;
+}
+.com_cartItem img{
+ width: 20rem;
+}
+
+.com_span{
+    width:20rem;
+}
+
+.com_info{
+    color:#707070 ;
+    padding-top: 1rem;
+}
+
+.pay-info{
+    display: inline-block;
+}

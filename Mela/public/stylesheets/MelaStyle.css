@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style:none;
+    font-family: 'jf-openhuninn-1.1'
+}
+.logoimg img{
+    width: 80px;
+}
+.titleimg img{
+    width: 600px;
+}
+
+/* //h1 標題  */
+h1{
+    font-size: 50px;
+    color:#8FC31F;
+}
+/* //h2 裝飾文字 */
+h2{
+    font-size: 100px;
+    color:#D1F185;
+}
+/* //h3 小標題 */
+h3{
+    font-size: 23px;
+    color:#8FC31F;
+    line-height: 2rem;
+}
+/* //h4 內文 */
+h4{
+    font-size: 16px;
+    color:#58751A;
+    line-height: 2rem;
+}
+/* //p 說明文字 */
+p{
+    font-size: 14px;
+    color: gray;
+    line-height: 1.4rem;
+}
+/* //按鈕 button */
+.btnMela{
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    width: 100px;
+    height: 45px;
+    font-size: 16px;
+    color: white;
+    background-color:#8FC31F;
+    margin: 2px 4px;
+    transition-duration: 0.5s;
+    /* background: url("img/member_icon.svg") no-repeat left center; */
+}
+.btnMela:hover{
+    background-color:white;
+    color:#8FC31F ;
+    border: 1px solid #8FC31F;
+}
+/* =================================== */
+.btntop{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.button2:hover{
+    background-color:#D1F185;
+    color:#58751A ;
+    border: 1px solid #D1F185;
+}
+

@@ -1,0 +1,110 @@
+
+/* 設定全部字形 */
+
+*{
+    font-family: 'jf-openhuninn-1.1'
+}
+
+/* 設定字形end */
+
+.navbar {
+    height: 10vh;
+    background-color: grey;
+}
+
+.boDy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    flex-basis: auto;
+}
+
+.footer {
+
+    height: 10vh;
+    background-color: grey;
+
+}
+
+/* 表單外框(調整) */
+.draw {
+    display: flex;
+    width: 70vh;
+    height: 70vh;
+    /* background-color: blue; */
+    flex-direction: column;
+
+    }
+/* 表單外框end */
+
+
+/* 切換登入/註冊 */
+
+.change {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    color: #8FC31F;
+}
+
+.fromTitle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+    border:  1px solid grey ;
+    border-bottom-style: none;
+    color: #8e8e8e;
+}
+
+
+/* 切換登入/註冊end */
+
+/* 登入form1 */
+
+.inputForm {
+    width: 100%;
+    height: 100%;
+    border:  1px solid grey ;
+    color: #8FC31F;
+    padding: 50px;
+    border-radius: 0px 0px 10px 10px;
+    border-top-style: none;
+}
+
+/* 輸入帳密 */
+.account>input {
+    width: 100%;
+}
+
+.password {
+    margin-top: 8px;
+}
+
+.password>input {
+    width: 100%;
+}
+/* form-end */
+
+/* 按鈕Star */
+.comfirm {
+    border: 0;
+    margin-top: 8px;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    color: white;
+    background-color: #8FC31F;
+    transition-duration: 0.5s;
+}
+
+.comfirm:hover {
+    background-color: white;
+    color: #8FC31F;
+    border: 1px solid #8FC31F;
+}
+/* 按鈕End */

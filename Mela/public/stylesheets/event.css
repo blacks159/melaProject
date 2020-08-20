@@ -1,0 +1,263 @@
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/* font: inherit; */
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 全域設定 */
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-family: 'jf-openhuninn-1.1';
+}
+
+/* header */
+.logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 0 0 30px 0;
+    z-index: 10;
+}
+/* header圖片 */
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+/* 捲動後header設定 */
+.white{
+    transition: background 1s;
+    background: white;
+    height: 100px;
+}
+
+.nav-item{
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.navset{
+    height: 100px;
+    z-index: 99;
+    transition: background 1s;
+}
+
+.nav-current{
+    font-size: 18px;
+    font-family: 'jf-openhuninn-1.1';
+    color: #8FC31F;
+    text-align: center;
+    position: relative;
+}
+
+.nav-current:hover{
+  background: white;
+  color: #8FC31F;
+  border-radius: 50px
+}
+
+.nav-current::before{
+  position: absolute;
+  top: -20%;
+  right: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #8FC31F;
+  content: "";
+  opacity: 1;
+}
+
+.nav-menu{
+    font-size: 18px;
+    font-family: 'jf-openhuninn-1.1';
+    color: #8FC31F;
+    text-align: center;
+    position: relative;
+}
+
+.nav-menu:hover{
+    background: white;
+    color: #8FC31F;
+    border-radius: 50px
+}
+
+.nav-menu::before{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #8FC31F;
+    content: "";
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.18, 0.65, 0.08, 1.01);
+}
+
+.nav-menu:hover::before{
+    top: -20%;
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.18, 0.65, 0.08, 1.01);
+}
+
+p{
+    color: #8FC31F;
+    font-family: 'jf-openhuninn-1.1';
+}
+
+.showmenu{
+    display: none;
+}
+/* // */
+.wrap{
+    /* background-color: #8FC31F; */
+    /* display: flex; */
+    width: 100%;
+    margin: 0 auto;
+}
+.photoround{
+    /* width: 800px; */
+    margin: 0px 230px;
+    position: relative;
+}
+.title{
+    float: center;
+    width: 100%;
+    /* margin: 10px 230px; */
+    text-align: center;
+}
+.title h2{
+    position: absolute;
+    top:620px
+}
+.evencards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding: 20px 20px; */
+    /* margin: 50px 230px; */
+    align-items: center;
+}
+.evencards .card{
+    margin: 10px;
+    border: #8FC31F 1px solid;
+}
+.titlecolor{
+    background-color:#D1F185;
+    border-radius: 12px;
+    text-align: center;
+    color: #58751A;
+    font-size: 15px;
+    width:120px;
+    height: 25px;
+    padding: 3px;
+    margin:5px;
+}
+.btnseason{
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 450px;
+    align-items: center;
+    /* width: 500px; */
+}
+.btnMela{
+    margin-right: 20px;
+}
+.memberinfo{
+    margin: 100px 230px;
+    line-height: 1.4rem;
+    text-align: center;
+    align-items: center;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+}
+.footerimg{
+    position: relative;
+}
+.footer h4{
+    position: absolute;
+    top: 250px;
+    left: 35%;
+}
+.footerlink{
+    display: flex;
+    position: absolute;
+    top: 200px;
+    left: 35%;
+}
+.footerlink a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+.footerlink a:hover{
+    color: #58751A;
+}
+
+.footerimg img{
+    width: 100%
+}
+
+/* Swiper */
+.swiper-container {
+    margin-top: 100px;
+    width: 100%;
+    height:auto;
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: auto;
+}

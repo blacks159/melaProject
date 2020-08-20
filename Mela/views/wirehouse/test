@@ -1,0 +1,29 @@
+<td class="">
+    <div class="melaNicky">
+        <input type="checkbox">
+        <div><img src="/images/file.png" alt="" width="30px"></div>
+    </div>
+</td>
+
+--------------------------------------------------------------------------------------------------
+
+router.get('/secret', function(req, res, next) {
+  if(req.session.userName == "Guest") {
+    req.session.url = '/users/secret';
+    res.redirect('/users/login');
+  }else{
+    res.render('secret', {});
+  }
+});
+
+router.post('/login', function(req, res, next) {
+  if(req.body.txtUserName != ""){
+    req.session.userName = req.body.txtUserName;
+    // if(req.query.getUrl) {
+      res.redirect(req.session.url);
+    // }
+    res.redirect('/');
+  }else{
+      res.render('login', { password: req.body.txtPassword });
+  }
+});

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Bootstrap 4 CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Bootstrap 4 JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Jquery -->
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+    <!-- 字型 jf-openhuninn-1.1 -->
+    <link rel="stylesheet" href="/stylesheets/font/jf-openhuninn-1.1.ttf">
+    <!-- JS -->
+    <script src="/javascripts/all.js"></script>
+    <!-- css引用MelaStyle.css -->
+    <link rel="stylesheet" href="/stylesheets/shop.css">
+    <link rel="stylesheet" href="/stylesheets/MelaStyle.css">
+    <title>方案購買</title>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <!-- header -->
+    <!-- logo -->
+    <%- include('./share/navigation') -%>
+    <div class="wrap">
+        <!-- 當月蔬果箱 -->
+        <div class="boxinfo">
+            <div class="titleimg">
+                <img src="/images/title03.png" class="wow slideInUp" width="500px">
+            </div>
+            <img src="/images/index_veg03.jpg">
+            <p>每季會公布產出供應品項，依季節氣候提供最合時令之蔬果品項，
+                由長期合作之在地栽培有機農民供應。</p>
+            <div class="boxinfotext wow slideInUp">
+                <h3>7~10月</h4>
+                    <h4>葉菜類：A菜、小松菜、青松菜、地瓜葉、青江菜、龍鬚菜、空心菜。<br>
+                        瓜果類：瓠瓜、絲瓜、大黃瓜、玉米筍、佛手瓜、黃玉米。<br>
+                        菇類：金滑菇、柳松菇、鴻喜菇、木耳、黑美人菇、金針菇。<br>
+                        豆芽類：綠豆芽、黃豆芽。<br>
+                        根莖類：紅蘿蔔、結頭菜、地瓜、白蘿蔔、馬鈴薯。</h4>
+            </div>
+        </div>
+        <!-- 方案介紹 -->
+        <div class="shoptitle">
+            <img src="/images/title04.png" class="wow slideInUp" width="500px">
+            <h4>現在下訂會收到8月號蔬果箱</h4>
+            <p>※訂閱制為每個月第二周周三出貨</p>
+        </div>
+        <div class="shopmenu">
+            <div class="shoponce">
+                <h3>體驗箱 <br>NT899(單次)</h3>
+                <img src="/images/shoponce.png" class="wow bounceIn" width="150px">
+            </div>
+            <div class="shopmonth">
+                <div class="shopmonthA">
+                    <div class="item">
+                        <h3 class="itemB">樂活箱 <br>NT799(每月)</h3>
+                        <img src="/images/mounthitemA.png" class="wow bounceIn" width="180px">
+                        <div class="itemnameB">
+                            <h5>訂閱制</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopmonthB">
+                    <div class="item">
+                        <h3 class="itemC">森活箱 <br>NT1099(每月)</h3>
+                        <img src="/images/mounthitemB.png" class="wow bounceIn" width="200px">
+                        <div class="itemnameC">
+                            <h5>訂閱制</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 體驗箱 -->
+        <div class="chooseitemA">
+            <img src="/images/shoponce.png" height="300px">
+            <div class="chooseitemtext">
+                <h3>體驗箱 <br>NT899/單次</h3>
+                <p>體驗一次mela嚴選的當季蔬果<br>4類蔬菜，適合2-3人小家庭。</p>
+                <h4>有機蔬菜箱每份蔬菜的份量列表</h4>
+                <p>◎ 高麗菜 1kg <br>◎ 小葉菜類 250g <br>◎ 根莖瓜果類 650g
+                    <br>◎ 芽菜類/菇類 200g <br>◎ 當季水果1款</p>
+                <a href="/users/memberLogin">
+                    <button class="btnMela">立即體驗</button>
+                </a>
+            </div>
+        </div>
+        <!-- 樂活箱 -->
+        <div class="chooseitemB">
+            <img src="/images/mounthitemA.png" height="300px">
+            <div class="chooseitemtext">
+                <h3>樂活箱 <br>NT799/每月</h3>
+                <p>1年訂閱制，每月配送Mela嚴選的當季蔬果<br> 6類蔬果，適合4~6人家庭。</p>
+                <h4>有機蔬菜箱每份蔬菜的份量列表</h4>
+                <p>◎ 高麗菜 2kg <br>◎ 小葉菜類 450g <br>◎ 根莖瓜果類 1kg
+                    <br>◎ 芽菜類/菇類 500g <br>◎ 當季水果2款</p>
+                <button class="btnMela">立即體驗</button>
+            </div>
+        </div>
+        <!-- 森活箱 -->
+        <div class="chooseitemC">
+            <img src="/images/mounthitemB.png" height="300px">
+            <div class="chooseitemtext">
+                <h3>森活箱 <br>NT1099/每月</h3>
+                <p>1年訂閱制，每月配送Mela嚴選的當季蔬果<br> 8類蔬果，適合6~8人家庭或團體。</p>
+                <h4>有機蔬菜箱每份蔬菜的份量列表</h4>
+                <p>◎ 高麗菜 3kg <br>◎ 小葉菜類 550g <br>◎ 根莖瓜果類 1.5g
+                    <br>◎ 芽菜類/菇類 800g <br>◎ 當季水果3款</p>
+                <button class="btnMela">立即體驗</button>
+            </div>
+        </div>
+        <div class="memberinfo">
+            <h4>加入會員掌握最新方案資訊</h4>
+            <a href="/users/memberRegister">
+                <button class="btnMela">加入會員</button>
+            </a>
+        </div>
+        <!-- 頁尾 -->
+        <div class="footer wow fadeInUp">
+            <div class="footerimg">
+                <img src="/images/footerbackground.png">
+                <div class="footerlink">
+                    <a href="">
+                        <h5>購物說明</h5>
+                    </a>
+                    <a href="">
+                        <h5>| 網站使用條款</h5>
+                    </a>
+                    <a href="">
+                        <h5>| 隱私權政策</h5>
+                    </a>
+                    <a href="">
+                        <h5>| 聯絡我們</h5>
+                    </a>
+                </div>
+                <h4>© 2020 Mela 蔬果箱訂閱｜每月小農蔬果新鮮配送到府</h4>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".chooseitemA").show;
+            $(".chooseitemB").hide();
+            $(".chooseitemC").hide();
+            // 點體驗箱頁籤
+            $('.shoponce').click(function () {
+                $(".chooseitemA").show();
+                $(".chooseitemB").hide();
+                $(".chooseitemC").hide();
+            })
+            // 點樂活箱頁籤
+            $('.shopmonthA').click(function () {
+                $(".chooseitemB").show();
+                $(".chooseitemC").hide();
+                $(".chooseitemA").hide();
+            })
+            // 點森活箱頁籤
+            $('.shopmonthB').click(function () {
+                $(".chooseitemC").show();
+                $(".chooseitemB").hide();
+                $(".chooseitemA").hide();
+            })
+        })
+
+    </script>
+</body>
+
+</html>

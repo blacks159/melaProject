@@ -1,0 +1,192 @@
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* header */
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Noto Sans TC', sans-serif;
+    border-bottom: crimson solid 1px;
+    background-color: white;
+    z-index: 100;
+}
+
+.menu{
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.cart{
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+/* content */
+
+.warp {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .content {
+    margin: 0 auto;
+    margin-top: 200px;
+    text-align: center;
+    width: 800px;
+  }
+  
+  .register {
+    margin-right: 200px;
+    width: 100%;
+    border: 0;
+    background-color: white;
+    opacity: 0.75;
+    display: block;
+  }
+  .login {
+      margin-right: 200px;
+      width: 100%;
+      border: 0;
+      background-color: white;
+      opacity: 0.75;
+    display: none;
+  }
+  
+  .content-info {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid rgb(216, 216, 216);
+  }
+  
+  .topt {
+    display: inline-flex;
+    margin-bottom: 30px;
+  }
+  
+  .t1 input {
+    font-family: "Noto Sans TC", sans-serif;
+    border-width: 0px;
+    margin: 0 auto;
+    width: 400px;
+    height: 80px;
+    background-color: white;
+    border-right:1px solid  #e2dee0;
+    border-bottom:1px solid  #e2dee0;
+  }
+  
+  .t2 input {
+    font-family: "Noto Sans TC", sans-serif;
+    border-width: 0px;
+    margin: 0 auto;
+    width: 400px;
+    height: 80px;
+    background-color: white;
+    border-bottom:1px solid  #e2dee0;
+  }
+  
+  .t3 input {
+    font-family: "Noto Sans TC", sans-serif;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  
+  .t5 input {
+      margin-bottom: 30px;
+  }
+  
+  .t6 input {
+    font-family: "Noto Sans TC", sans-serif;
+    color: white;
+    border-width: 0px;
+    margin: 0 auto;
+    width: 250px;
+    height: 50px;
+    background-color: #FF91C1;
+  }
+  
+  .sub-log:hover{
+      background-color: #FF91C1;
+      color: white;
+  }
+
+  /* 頁尾 */
+  .footer{
+    text-align: center;
+    width: 100%;
+}
+.footerimg{
+    position: relative;
+}
+.footer h4{
+    position: absolute;
+    top: 250px;
+    left: 35%;
+}
+.footerlink{
+    display: flex;
+    position: absolute;
+    top: 200px;
+    left: 35%;
+}
+.footerlink a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+.footerlink a:hover{
+    color: #58751A;
+}
+
+.footerimg img{
+    width: 100%
+}

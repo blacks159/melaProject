@@ -1,0 +1,251 @@
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/* font: inherit; */
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 以上CSS RESET */
+/* 全域設定 */
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-family: 'jf-openhuninn-1.1';
+}
+/* body{
+    overflow-x: hidden;
+} */
+
+/* header */
+.logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 0 0 30px 0;
+    z-index: 10;
+}
+/* header圖片 */
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+/* 捲動後header設定 */
+.white{
+    transition: background 1s;
+    background: white;
+    height: 100px;
+}
+
+.nav-item{
+    margin-top: 20px;
+    margin-right: 50px;
+}
+/* 捲動回上層herder設定 */
+.navset{
+    height: 100px;
+    z-index: 99;
+    transition: background 1s;
+}
+/* 三選項設定 */
+.nav-menu{
+    font-size: 18px;
+    font-family: 'jf-openhuninn-1.1';
+    color: #8FC31F;
+    text-align: center;
+    position: relative;
+}
+/* 三選項hover設定 */
+.nav-menu:hover{
+    background: white;
+    color: #8FC31F;
+    border-radius: 50px
+}
+/* 三選項小球偽元素 */
+.nav-menu::before{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #8FC31F;
+    content: "";
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.18, 0.65, 0.08, 1.01);
+}
+/* 三選項小球偽元素hover */
+.nav-menu:hover::before{
+    top: -20%;
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.18, 0.65, 0.08, 1.01);
+}
+
+p{
+    color: #8FC31F;
+    font-family: 'jf-openhuninn-1.1';
+}
+/* RWD設定 */
+.showmenu{
+    display: none;
+}
+/* // */
+.wrap{
+    margin: auto;
+}
+.container{
+    display: flex;
+    align-items: center;
+    padding: 200px 100px;
+}
+.controltable{
+    align-items: center;
+    text-align:center;
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    /* border: #8FC31F 1px solid; */
+    /* border-radius: 8%; */
+}
+h5{
+    font-size: 18px;
+    color:white;
+    text-align: center;
+    line-height: 2rem;
+}
+h5:hover{
+    background-color: #8FC31F;
+    color: white;
+    cursor: pointer;
+}
+.tablewrap{
+    width: 100%;
+}
+.tabletag{
+    display: flex;
+    justify-content:left;
+    flex-direction: row;
+    cursor: pointer;
+}
+.tabletag div{
+    text-align: center;
+    width: 150px;
+    height: 38px;
+    padding: 10px 10px;
+    background-color: white;
+    border: #8FC31F 1px solid;
+    border-bottom: none;
+    color: #8FC31F;
+}
+/* .tabletag div:hover{
+    background-color: #8FC31F;
+} */
+.tabletag div a:hover{
+    color:#58751A;
+}
+.tabletag div a{
+    text-decoration: none;
+    color:#8FC31F;
+}
+.tableinfotag{
+    display: flex;
+    padding: 10px;
+    text-align: center;
+}
+.tableinfoorder{
+    width: 100%;
+    /* background-color: #F7F9F2; */
+    /* height: 300px; */
+    /* margin: 20px; */
+    padding: 10px;
+    border: #8FC31F 1px solid;
+    /* border-radius: 7%; */
+}
+.tableinfoevent{
+    width: 100%;
+    /* background-color: #F7F9F2; */
+    /* height: 300px; */
+    /* margin: 20px; */
+    padding: 10px;
+    border: #8FC31F 1px solid;
+    /* border-radius: 7%; */
+}
+.tableinfomember{
+    width: 100%;
+    /* height: 450px; */
+    padding: 20px 50px;
+    border: #8FC31F 1px solid;
+}
+.tableinfomember div{
+    padding: 10px 0px;
+}
+.tableinfomember div input{
+    width:300px;
+}
+.footer{
+    text-align: center;
+    width: 100%;
+}
+.footerimg{
+    position: relative;
+}
+.footerlink{
+    display: flex;
+    position: absolute;
+    top: 200px;
+    left: 460px;
+}
+.footerlink a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+.footerlink a:hover{
+    color: #58751A;
+}
+
+.footerimg img{
+    width: 100%
+}

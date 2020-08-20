@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Bootstrap 4 CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Bootstrap 4 JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Jquery -->
+    <script src="/javascripts/jquery-3.5.1.min.js"></script>
+    <!-- 字型 jf-openhuninn-1.1 -->
+    <link rel="stylesheet" href="/stylesheets/font/jf-openhuninn-1.1.ttf">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/MelaStyle.css">
+    <link rel="stylesheet" href="/stylesheets/cartListBox.css">
+    <!-- JS -->
+    <script src="/javascripts/all.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <!-- 導覽列 -->
+    <%- include('./share/navigation',{result}) -%>
+
+    <!-- 購物進度條 -->
+    <div class="warp">
+        <div class="container-fluid">
+            <div class=""></div>
+            <ul class="row mt-5">
+                <li class="col-2"></li>
+                <li class="col-2 text-center"><span class=" step p-2 stepActive"> Step 1</span></li>
+                <li class="col-2 text-center"><span class=" step p-2 stepActive"> Step 2</span></li>
+                <li class="col-2 text-center"><span class=" step p-2 stepActive"> Step 3</span></li>
+                <li class="col-2 text-center"><span class=" step p-2"> Step 4</span></li>
+            </ul>
+            <ul class="row  align-items-center mt-4 mb-5">
+                <li class="col-2  align-items-left"></li>
+                <li class=" col-2 stepInfo text-center">確認訂購資訊</li>
+                <li class=" col-2 stepInfo text-center">填寫付款資料</li>
+                <li class=" col-2 stepInfo text-center">訂單明細</li>
+                <li class=" col-2 stepInfo text-center">完成訂購</li>
+            </ul>
+            <!-- 訂單內容 -->
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8 shoppingCart">
+                    <div class="row shoppingCart_title align-bottom">
+                        <div class="align-bottom">
+                            <h3 class="p-3 pay-info">訂單內容</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-9 mt-3">
+                            <div class="col-3"></div>
+                            <span class="col-2 payMethod_title">收&nbsp;&nbsp;件&nbsp;&nbsp;人</span>
+                            <!-- 收件人 -->
+                            <span id="delName" class=" payMethod_content"></span>
+                        </div>
+                        <div class="col-9"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-9 mt-3">
+                            <div class="col-3"></div>
+                            <span class="col-2 payMethod_title">訂購明細</span>
+                            <span id="delList" class=" payMethod_content"></span>
+                            <div class="col-9"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-9 mt-3">
+                            <div class="col-3"></div>
+                            <span class="col-2 payMethod_title">送件地址</span>
+                            <span id="delAdr" class=" payMethod_content"></span>
+                            <div class="col-9"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-9 mt-3">
+                            <div class="col-3"></div>
+                            <span
+                                class="col-2 payMethod_title">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;機</span>
+                            <span id="delphone" class=" payMethod_content"></span>
+                            <div class="col-9"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-9 mt-3">
+                            <div class="col-3"></div>
+                            <span class="col-2 payMethod_title">付款方式</span>
+                            <span id="delpay" class=" payMethod_content"></span>
+                            <div class="col-9"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-9 mt-3">
+                            <div class="col-3"></div>
+                            <span class="col-2 payMethod_title">發票方式</span>
+                            <span id="recieptMethod" class=" payMethod_content"></span>
+                            <div class="col-9"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-9 mt-3">
+                            <div class="col-3"></div>
+                            <span
+                                class="col-2 payMethod_title">備&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;註</span>
+
+                            <span id="memo" class=" payMethod_content"></span>
+                            <div class="col-9"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-9 mt-3">
+                            <div class="col-3"></div>
+                            <span class="col-2 payMethod_title">總&nbsp;&nbsp;金&nbsp;&nbsp;額</span>
+
+                            <span id="total" class=" payMethod_content"></span>
+                            <div class="col-9"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 下一步按鈕 -->
+            <div class="row mt-5 ">
+                <div class="col-2"></div>
+                <div class="col-2" style="padding: 0px;">
+                    <a href="/melaShopPayment">
+                        <button class="btnStep btnUp noneActive" style="width: 100%;">上一步</button>
+                    </a>
+                </div>
+                <div class="col-4"></div>
+                <div class="col-2" style="padding: 0px;">
+                    <!-- <button id="okbutton">ok</button> -->
+                    <a href="./melaShopList">
+                        <button class="btnStep btnNext" style="width: 100%;" id="okbutton">確認送出</button>
+                    </a>
+                </div>
+            </div>
+            <!-- 頁尾 -->
+            <div class="footer">
+                <%- include('./share/footer') -%>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var person = JSON.parse(localStorage.getItem("person"));
+    var cart = JSON.parse(localStorage.getItem("cart"));
+
+    // 總金額
+    function getTotal() {
+        var y = 0;
+        for (i = 0; i < cart.length; i++) {
+            y = y + cart[i].price;
+        }
+        return y;
+    };
+    // 訂購明細
+    function getList() {
+        var x = "";
+        for (i = 0; i < cart.length; i++) {
+            x = x + cart[i].name + ' * ' + cart[i].amount + ' , ';
+        }
+        return x;
+    };
+    //數量
+    function getAmount() {
+        var z = 0;
+        for (i = 0; i < cart.length; i++) {
+            z = z + parseInt(cart[i].amount);
+            // console.log('amount:' + Number(cart[i].amount))
+        }
+        return z;
+    }
+
+    setOder();
+    function setOder() {
+        document.getElementById("delName").innerText = person.name;
+        document.getElementById("delAdr").innerText = person.adr;
+        document.getElementById("memo").innerText = person.memo;
+        document.getElementById("delphone").innerText = person.phone;
+        document.getElementById("delpay").innerText = person.payMethod;
+        document.getElementById("recieptMethod").innerText = person.recieptMethod;
+        document.getElementById("delList").innerText = getList();
+        document.getElementById("total").innerText = getTotal();
+    }
+
+    //送出要進去資料庫的資料
+    // function setItem() {
+    //     for (let $i = 0; $i < cart.length; $i++) { cart[$i] }
+    // }
+    $('#okbutton').click(function () {
+        var newItem = {
+            delName: person.name,
+            delAdr: person.adr,
+            delphone: person.phone,
+            delpay: person.payMethod,
+            memo: person.memo,
+            recieptMethod: person.recieptMethod,
+            total: getTotal(),
+            list: getList(),
+            amount: getAmount(),
+        }
+
+        $.ajax({
+            type: "post",
+            url: "/shop/melaShopOrder",
+            dataType: "json",
+            data: newItem
+        })
+        console.log(newItem)
+    })
+</script>
+
+</html>

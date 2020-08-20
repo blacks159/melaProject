@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Bootstrap 4 CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- Bootstrap 4 JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <!-- WOW.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <!-- Jquery -->
+  <script src="/javascripts/jquery-3.5.1.min.js"></script>
+  <!-- JS -->
+  <script src="/javascripts/all.js"></script>
+  <!-- 字型 jf-openhuninn-1.1 -->
+  <link rel="stylesheet" href="/stylesheets/font/jf-openhuninn-1.1.ttf">
+  <!-- css引用MelaStyle.css -->
+  <link rel="stylesheet" href="/stylesheets/originplaceStyle.css">
+  <link rel="stylesheet" href="/stylesheets/MelaStyle.css">
+  <!-- <link rel="stylesheet" href="css/hotspot copy.css"> -->
+  <title>產地介紹</title>
+</head>
+
+<body>
+  <!-- 導覽列 -->
+  <!-- header -->
+  <!-- logo -->
+  <%- include('./share/navigation') -%>
+  <div class="warp">
+    <div class="container">
+      <div class="map">
+        <img src="/images/taiwanmap02.png">
+      </div>
+      <!-- 雲林縣 -->
+      <div class="mapspot1 wow zoomIn"><button class="spot"></button></div>
+      <!-- 嘉義縣 -->
+      <div class="mapspot2 wow zoomIn"><button class="spot"></button></div>
+      <!-- 以下點內無內容 -->
+      <div class="mapspot3 wow zoomIn"><button class="spot"></button></div>
+      <div class="mapspot4 wow zoomIn"><button class="spot"></button></div>
+      <div class="mapspot5 wow zoomIn"><button class="spot"></button></div>
+
+      <div class="mapinfo1 wow zoomIn">
+        <img src="/images/originplace02.jpg" width="500px">
+        <div class="mapinfotext">
+          <div class="titlecolor">
+            <h5>雲林縣台西鄉</h5>
+          </div>
+          <h3>汯蒝有機農場 有機西瓜</h3>
+          <p>汯蒝有機農場是第二個獲得有機認證的農場，也是種植有機西瓜的先行者，
+            以四季輪作來保持土壤有機質的平衡；其中西瓜田有4分多地，年產量約1.2萬台斤，
+            因應都會小家庭需求，又以形如迷你冬瓜、個頭小巧的「甜美人」西瓜為大宗。</p>
+        </div>
+      </div>
+      <div class="mapinfo2 wow zoomIn">
+        <img src="/images/originplace05.jpg" width="500px">
+        <div class="mapinfotext">
+          <div class="titlecolor">
+            <h5>嘉義縣六腳鄉</h5>
+          </div>
+          <h3>亞太農場 紅鬚玉米筍</h3>
+          <p>紅鬚玉米筍的料理方式很多，除了剝殼炒，她建議可連同外殼一起汆燙或用烤箱烤，
+            熟了之後再剝掉外殼沾鹽或沙拉醬吃；或者用電鍋蒸煮後連同最裡層的嫩殼一起食用，
+            都能享用到玉米筍的鮮甜多汁！此外，以玉米鬚做成茶包煮茶，茶湯清爽甘甜。</p>
+        </div>
+      </div>
+    </div>
+    <!-- 點點資訊開合 -->
+    <script>
+      $(document).ready(function () {
+        $(".mapinfo1").show();
+        $(".mapinfo2").hide();
+        $(".mapspot1").click(function () {
+          $(".mapinfo2").hide();
+          $(".mapinfo1").show();
+        })
+        $(".mapspot2").click(function () {
+          $(".mapinfo1").hide();
+          $(".mapinfo2").show();
+        })
+      })
+    </script>
+    <div class="container-fluid">
+      <div class="box1">
+        <div style="margin-bottom: 20px;">
+          <h2>IN every Season</h2>
+        </div>
+        <div class="btnseason">
+          <button class="spring" style="background-color: #F596AA">春季<br>spring</button>
+          <button class="summer" style="background-color: #E8B647">夏季<br>summer</button>
+          <button class="atumn" style="background-color: #CA7A2C">秋季<br>atumn</button>
+          <button class="winter" style="background-color: #B4A582">冬季<br>winter</button>
+        </div>
+        <img src="/images/seasonbtnback.png" alt="">
+      </div>
+      <div class="box2 wow fadeInUp">
+        <div id="theArt">
+          <div class="artGroup slide">
+            <div class="artwork"> <img src="/images/originplace03.jpg">
+              <div class="detail">
+                <h4>陳皓崴有機農場</h4>
+                <h3>蘋果絲瓜</h3>
+                <p>在農場裡，有傳統型的米管型絲瓜，和短短圓圓的新品種蘋果絲瓜。
+                  夏季絲瓜最好用報紙包著存放在冰箱的蔬菜抽屜，避免太快出絲，
+                  農友用心種出安心的蔬菜，也希望消費者趁鮮品嘗。</p>
+              </div>
+            </div>
+          </div>
+          <div class="artGroup slide">
+            <div class="artwork"> <img src="/images/originplace04.jpg">
+              <div class="detail">
+                <h4>麻園有機農場</h4>
+                <h3>鮮甜紅蘿蔔</h3>
+                <p>紅蘿蔔要好吃，還有一個秘訣，「旭陽品種110天就可以採收，但完全成熟要120天，
+                  甜度香味才會出來。如果天數不到的話，吃起來不會甜而且會帶苦味。」</p>
+              </div>
+            </div>
+          </div>
+          <div class="artGroup slide">
+            <div class="artwork"> <img src="/images/originplace05.jpg">
+              <div class="detail">
+                <h4>亞太農場</h4>
+                <h3>紅鬚玉米筍</h3>
+                <p>紅鬚玉米筍的料理方式很多，除了剝殼炒，她建議可連同外殼一起汆燙或用烤箱烤，
+                  熟了之後再剝掉外殼沾鹽或沙拉醬吃；或者用電鍋蒸煮後連同最裡層的嫩殼一起食用，
+                  都能享用到玉米筍的鮮甜多汁！此外，以玉米鬚做成茶包煮茶，茶湯清爽甘甜。</p>
+              </div>
+            </div>
+          </div>
+          <div class="artGroup slide">
+            <div class="artwork"> <img src="/images/originplace13.jpg">
+              <div class="detail">
+                <h4>綠園有機農場</h4>
+                <h3>有機紅肉火龍果</h3>
+                <p>把握火龍果好吃的關鍵：熟度！
+                  許多人總是詢問怎麼挑選好吃的火龍果？農友柯智雄也道出好吃的最後關鍵就是熟度的把握！
+                  當果皮的色澤均勻地呈現出紅色時，就是品嘗美味的最佳時刻！</p>
+              </div>
+            </div>
+          </div>
+          <div class="artGroup slide">
+            <div class="artwork"> <img src="/images/originplace02.jpg">
+              <div class="detail">
+                <h4>汯蒝有機農場</h4>
+                <h3>有機西瓜</h3>
+                <p>以四季輪作來保持土壤有機質的平衡；其中西瓜田有4分多地，年產量約1.2萬台斤，
+                  因應都會小家庭需求，又以形如迷你冬瓜、個頭小巧的「甜美人」西瓜為大宗。</p>
+              </div>
+            </div>
+          </div>
+          <div class="artGroup slide">
+            <div class="artwork"> <img src="/images/originplace06.jpg">
+              <div class="detail">
+                <h4>冠軍甘藷生產合作社</h4>
+                <h3>有機甘藷</h3>
+                <p>在天冷時品嘗一顆烤地瓜，那香熱鬆軟的甜蜜滋味，是深植人心的味覺記憶。
+                  好吃的甘藷要香甜、不粗絲，在冬季選擇有點皺紋、粗皮帶斑點的。
+                  秋冬的甘藷熟成期長，澱粉有充足時間轉為糖分，把蒂折掉，糖就從甘藷頭跑出來！</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 加入會員 -->
+      <div class="memberinfo">
+        <h4>心動了嗎?</h4>
+        <h4>加入會員掌握最新資訊</h4>
+        <a href="/users/memberRegister">
+          <button class="btnMela">加入會員</button>
+        </a>
+      </div>
+      <!-- 頁尾 -->
+      <div class="footer wow fadeInUp">
+        <div class="footerimg">
+          <img src="/images/footerbackground.png">
+          <div class="footerlink">
+            <a href="">
+              <h5>購物說明</h5>
+            </a>
+            <a href="">
+              <h5>| 網站使用條款</h5>
+            </a>
+            <a href="">
+              <h5>| 隱私權政策</h5>
+            </a>
+            <a href="">
+              <h5>| 聯絡我們</h5>
+            </a>
+          </div>
+          <h4>© 2020 Mela 蔬果箱訂閱｜每月小農蔬果新鮮配送到府</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+      if ($('html').hasClass('csstransforms3d')) {
+        $('.artGroup').removeClass('slide').addClass('flip');
+        $('.artGroup.flip').on('mouseenter',
+          function () {
+            $(this).find('.artwork').addClass('theFlip');
+          });
+        $('.artGroup.flip').on('mouseleave',
+          function () {
+            $(this).find('.artwork').removeClass('theFlip');
+          });
+      } else {
+        $('.artGroup').on('mouseenter',
+          function () {
+            $(this).find('.detail').stop().animate({ bottom: 0 }, 500, 'easeOutCubic');
+          });
+        $('.artGroup').on('mouseleave',
+          function () {
+            $(this).find('.detail').stop().animate({ bottom: ($(this).height() + -1) }, 500, 'easeOutCubic');
+          });
+      }
+    });
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="/javascripts/jquery.hotspot.js"></script>
+  <!-- Custom JS -->
+
+  <script type="text/javascript"></script>
+</body>
+
+</html>

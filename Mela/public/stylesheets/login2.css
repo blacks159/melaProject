@@ -1,0 +1,188 @@
+
+/* 設定全部字形 */
+
+*{
+    font-family: 'jf-openhuninn-1.1'
+}
+
+/* 設定字形end */
+
+.navbar {
+    height: 10vh;
+    background-color: grey;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    flex-basis: auto;
+}
+
+.footer {
+
+    height: 10vh;
+    background-color: grey;
+
+}
+
+/* 表單外框(調整) */
+.draw {
+    display: flex;
+    width: 70vh;
+    height: 60vh;
+    /* background-color: blue; */
+    flex-direction: column;
+
+    }
+/* 表單外框end */
+
+
+/* 切換登入/註冊 */
+
+.change {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    color: #8FC31F;
+}
+
+.left {
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+    border:  1px solid grey ;
+    border-bottom-style: none;
+    color: #8e8e8e;
+}
+
+.right {
+    cursor: pointer;
+    border-bottom-style: none;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+    border: 1px solid grey ;
+    background-color: #CFCFCF;
+    color: #8e8e8e;
+
+}
+
+/* 切換登入/註冊end */
+
+/* 登入form1 */
+
+.inPut {
+    width: 100%;
+    height: 100%;
+    border:  1px solid grey ;
+    color: #8FC31F;
+    padding: 50px;
+    border-radius: 0px 0px 10px 10px;
+    border-top-style: none;
+    
+}
+
+/* 輸入帳密 */
+.account>input {
+    width: 100%;
+}
+
+.password {
+    margin-top: 15px;
+}
+
+.password>input {
+    width: 100%;
+}
+
+.robot {    
+    display: flex;
+    /* flex-direction: row-reverse; */
+    margin-top: 20px;
+    width: 30%;
+    height: 80px;
+    background-color: gray;
+}
+
+.chose {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* form-end */
+
+/* 註冊 2form */
+.inPut2 {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    
+    border-radius: 0px 0px 10px 10px;
+    color:#8FC31F;
+    border:  1px solid grey;
+}
+
+.signIn {
+    width: 100%;
+    height: 100%;
+}
+
+.signIn>span {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.signIn>span>input {
+    width: 50vh;
+}
+
+/* 註冊 form End */
+
+
+/* 按鈕Star */
+.comfirm {
+    border: 0;
+    border-radius: 5px;
+    width: 100px;
+    height: 45px;
+    color: white;
+    background-color: #8FC31F;
+    transition-duration: 0.5s;
+}
+
+.comfirm:hover {
+    background-color: white;
+    color: #8FC31F;
+    border: 1px solid #8FC31F;
+}
+
+.cancel {
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    width: 100px;
+    height: 45px;
+    color: white;
+    background-color: gray;
+    transition-duration: 0.5s;
+}
+
+.cancel:hover {
+    background-color: white;
+    color: gray;
+    border: 1px solid gray;
+}
+/* 按鈕End */
